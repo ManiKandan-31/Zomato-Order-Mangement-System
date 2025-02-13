@@ -6,7 +6,6 @@ This project is a web application that allows users to place food orders with re
 ## Project Structure
 - `app_home.py`: Main application script.
 - `templates/`: Directory containing HTML templates.
-- `static/`: Directory containing static files (if any).
 - `requirements.txt`: List of dependencies required to run the project.
 - `database_schema.sql`: SQL script for setting up the database schema.
 
