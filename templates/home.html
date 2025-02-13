@@ -1,20 +1,101 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Order Management</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zomato-like App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;        }
+        header {
+            background-color: #e54b4b;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .dish-item {
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            background-color: #fff;
+            border-radius: 5px;
+        }
+        .cart-item {
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            background-color: #fff;
+            border-radius: 5px;
+        }
+        .button {
+            padding: 10px 20px;
+            background-color: #e54b4b;
+            color: white;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+            border-radius: 5px;
+        }
+        .button:hover {
+            background-color: #c43c3c;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
 </head>
 <body>
-    <h1>Place Your Order</h1>
-    <form action="/place_order" method="post">
-        <label for="biriyani_quantity">Biriyani Quantity:</label>
-        <input type="number" id="biriyani_quantity" name="biriyani_quantity"><br>
-        <label for="paneer_quantity">Paneer Quantity:</label>
-        <input type="number" id="paneer_quantity" name="paneer_quantity"><br>
-        <label for="butter_chicken_quantity">Butter Chicken Quantity:</label>
-        <input type="number" id="butter_chicken_quantity" name="butter_chicken_quantity"><br>
-        <label for="address">Delivery Address:</label>
-        <input type="text" id="address" name="address"><br>
-        <input type="submit" value="Place Order">
-    </form>
+
+    <header>
+        <h1>Welcome to the Zomato-like App</h1>
+    </header>
+
+    <div class="container">
+        <h2>Order Your Favorite Dishes!</h2>
+
+        <!-- Simple form for placing orders -->
+        <form action="/place_order" method="POST">
+            <div class="dish-item">
+                <label for="biriyani_quantity">Biriyani</label><br>
+                <input type="number" id="biriyani_quantity" name="biriyani_quantity" value="0" min="0"><br><br>
+            </div>
+            <div class="dish-item">
+                <label for="paneer_quantity">Paneer</label><br>
+                <input type="number" id="paneer_quantity" name="paneer_quantity" value="0" min="0"><br><br>
+            </div>
+            <div class="dish-item">
+                <label for="butter_chicken_quantity">Butter Chicken</label><br>
+                <input type="number" id="butter_chicken_quantity" name="butter_chicken_quantity" value="0" min="0"><br><br>
+            </div>
+
+            <!-- Delivery Address -->
+            <label for="address">Delivery Address:</label><br>
+            <input type="text" id="address" name="address" required><br><br>
+
+            <!-- Submit Button -->
+            <button type="submit" class="button">Place Order</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Zomato-like App | All Rights Reserved</p>
+    </footer>
+
 </body>
 </html>
